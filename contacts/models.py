@@ -3,11 +3,11 @@ from django.db import models
 from django.utils import timezone
 
 class Category(models.Model):
-    name = models.CharField(max_length= 50)
-    
-    def _str_(self):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
         return self.name
-    
+
 
 class Contact(models.Model):
     name = models.CharField(max_length=50)
@@ -17,5 +17,5 @@ class Contact(models.Model):
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     creation_date = models.DateTimeField(default=timezone.now)
 
-    def _str_(self):
+    def __str__(self):
         return self.name
