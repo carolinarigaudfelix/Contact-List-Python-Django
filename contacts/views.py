@@ -7,7 +7,7 @@ def list(request):
     list_contacts = Contact.objects.all()
 
     return render(request, 
-                'list_contact.html', 
+                'base.html', 
                 {'list': list_contacts}
                 )
 
