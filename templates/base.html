@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Agenda</title>
+</head>
+
+<body>
+    <h1>Minha Agenda</h1>
+    {% if list %}
+        {% include 'parcials/_table.html' %}
+    {% else %}
+        <p>Nenhum Contato
+    {% endif %}
+    
+    {% block content %}{% endblock  %}
+
+</body>
+
+</html>

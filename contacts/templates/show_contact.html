@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% block content %}
+        <h1>{{ contact.name }}</h1>
+        <dl>
+          <dt>ID</dt>
+          <dd>{{ contact.id }}</dd>
+
+          <dt>Phone</dt>
+          <dd>{{ contact.phone }}</dd>
+
+          <dt>E-mail</dt>
+          <dd>{{ contact.email }}</dd>
+
+          <dt>Category</dt>
+          <dd>{{ contact.category }}</dd>
+
+          <dt>Date</dt>
+          <dd>{{ contact.creation_date|date:'d/m/Y  H:i:s' }}</dd>
+
+        </dl>
+
+{% endblock %}
