@@ -13,7 +13,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=256, null=True, blank=True)
     phone = models.CharField(max_length=256)
-    photo = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/')
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     creation_date = models.DateTimeField(default=timezone.now)
 

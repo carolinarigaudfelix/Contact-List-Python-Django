@@ -18,3 +18,9 @@ def show_contact(request, id_contact):
                 "show_contact.html",
                 {'contact': contact}            
     )
+
+def image_avatar(request):
+    avatar = Contact.objects.all() # ou qualquer outro filtro
+    return render(request,
+                "_list_contacts.html",
+                  {'avatar': avatar})
