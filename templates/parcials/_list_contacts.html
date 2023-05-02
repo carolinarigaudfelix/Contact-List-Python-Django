@@ -1,11 +1,28 @@
 {% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+
+    {% block content %}
     {% for contact in list %}
-        <div class="contact_info" >
+    <div class="card_contact">
+        <div class="card_image">
             <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
+        </div>
+        <div class="card_text">
             <h4>{{ contact.name }}</h4>
             <span>{{ contact.category  }}</span>
+            <br>
             <p>{{ contact.phone }}</p>
+            <p>{{ contact.email }}</p>
         </div>
+    </div>
+    
     {% endfor %}
-{% endblock  %}
+    {% endblock %}
+</body>
+</html>

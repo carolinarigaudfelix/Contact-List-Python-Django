@@ -1,0 +1,22 @@
+.card_contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height:min-content;
+    margin-bottom: 24px;
+    height: 40px;
+    gap:24px;
+}
+.card_contact h4, span{
+    margin: 0px;
+    display: inline-block;
+}
+
+.card_contact p{
+    font-size: 10px;
+    display: inline-block;
+    margin: 0px;
+}
+.card_image img {
+    border-radius: 20px;
+}

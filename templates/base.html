@@ -4,6 +4,7 @@
 
 <head>
     <title>Agenda</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 
     {% if list %}
         <h1>Seus Contatos</h1>
-        {% include 'parcials/_table.html' %}
+        {% comment %} {% include 'parcials/_table.html' %} {% endcomment %}
         {% include 'parcials/_list_contacts.html' %}
     {% else %}
         {% if notlist %}
