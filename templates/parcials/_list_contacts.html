@@ -3,23 +3,36 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{% static "css/style.css" %}">
+
 </head>
 <body>
 
     {% block content %}
     {% for contact in list %}
     <div class="card_contact">
-        <div class="card_image">
-            <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
-        </div>
-        <div class="card_text">
-            <h4>{{ contact.name }}</h4>
-            <span>{{ contact.category  }}</span>
-            <br>
-            <p>{{ contact.phone }}</p>
-            <p>{{ contact.email }}</p>
-        </div>
+        <div class="card_content">
+          <div class="card_image">
+                <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
+          </div>
+           <div class="card_text">
+                 <h4>{{ contact.name }}</h4>
+                 <span>{{ contact.category  }}</span>
+                 <br>
+                 <p>{{ contact.phone }}</p>
+                 <p>{{ contact.email }}</p>
+           </div>
+        </div> 
+          <div class="card_button">
+            <button>
+                <span class="material-symbols-outlined card_edit">edit</span>
+            </button>
+          </div>
     </div>
     
     {% endfor %}

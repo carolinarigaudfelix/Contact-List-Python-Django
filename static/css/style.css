@@ -1,22 +1,103 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+    border-bottom: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.card_list {
+    margin-right: 69px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card_contact {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    height:min-content;
-    margin-bottom: 24px;
-    height: 40px;
-    gap:24px;
+    justify-content: space-between;
+    height: 56px;
+    gap:12px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    margin-left: 69px;
+    margin-right: 69px;
+    align-items: center;
+
+}
+
+.card_content{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+}
+.card_button button span{
+    font-size: 14px;
+    margin:0px;
+    padding: 0px;
+    border-radius: 10px;
+    border: 0px;
+    justify-content:center;
+}
+
+
+
+.card_button button{
+    padding: 0px;
+    border: 0px;
+    align-items: center;
+    background-color:#FFFFFF ;
+    display: inline-block;
+
+}
+
+.card_contact:nth-child(even) {
+    background-color: #FFFFFF;
+  }
+  
+  /* para elementos ímpares */
+  .card_contact:nth-child(odd) {
+    background-color: #FAFAFA;
+  }
+
+h1{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font: weight 600px;
+}
+
+
+
+.card_contact h4{
+    font-size: 16px;
+    font-weight: 500;
 }
 .card_contact h4, span{
     margin: 0px;
     display: inline-block;
 }
 
+.card_text span{
+    margin-left: 16px;
+    font-size: 10px;
+    font-weight: 300;
+    
+    
+}
+
 .card_contact p{
     font-size: 10px;
     display: inline-block;
-    margin: 0px;
+    margin-right: 28px;
 }
 .card_image img {
-    border-radius: 20px;
+    border-radius: 32px;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
 }
