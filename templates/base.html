@@ -7,15 +7,22 @@
 </head>
 
 <body>
-    <h1>Minha Agenda</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     {% if list %}
+        <h1>Seus Contatos</h1>
         {% include 'parcials/_table.html' %}
+        {% include 'parcials/_list_contacts.html' %}
     {% else %}
-        <p>Nenhum Contato
+        {% if notlist %}
+            <p>Nenhum Contato
+        {% endif %}
     {% endif %}
     
     {% block content %}{% endblock  %}
 
 </body>
-
 </html>

@@ -1,0 +1,11 @@
+{% load static %}
+{% block content %}
+    {% for contact in list %}
+        <div class="contact_info" >
+            <img src="{{ my_object.image.url }}" alt="Imagem">
+            <h4>{{ contact.name }}</h4>
+            <span>{{ contact.category  }}</span>
+            <p>{{ contact.phone }}</p>
+        </div>
+    {% endfor %}
+{% endblock  %}

@@ -41,6 +41,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'note.urls'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 TEMPLATES = [
     {
