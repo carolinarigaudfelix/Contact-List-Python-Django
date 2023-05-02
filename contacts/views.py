@@ -18,8 +18,3 @@ def show_contact(request, id_contact):
                 "show_contact.html",
                 {'contact': contact}            
     )
-
-def show_image(request):
-    my_object = Contact.objects.get(pk=5)
-    context = {'my_object': my_object}
-    return render(request, '_list_contacts.html', context)
