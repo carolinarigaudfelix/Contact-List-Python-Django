@@ -19,18 +19,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <h1>Seus Contatos</h1>
+    {% if contact_list %}      
+        {% block content %}
+            {% for contact in contact_list %}
+                {% include 'list_components.html'%}
+            {% endfor %}
+        {% endblock %}
 
-    {% if list %}
-        <h1>Seus Contatos</h1>
-        {% include 'parcials/_list_contacts.html' %}
     {% else %}
-        {% if notlist %}
-            <p>Nenhum Contato
+        {% if not contact_list %}
+            <p>Nenhum Contato</p>
         {% endif %}
     {% endif %}
-    
-    {% block content %}{% endblock  %}
-    
-
+    {{% block  %}{% endblock  %}}
 </body>
 </html>
