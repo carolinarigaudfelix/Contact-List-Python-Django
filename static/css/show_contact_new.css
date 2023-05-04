@@ -16,7 +16,15 @@
     flex-direction: row;
     cursor: pointer;
     text-decoration: none;
-    align-items: center
+    align-items: center;
+    color: black;
+
+}
+
+.go_edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /* edit part */
@@ -27,14 +35,17 @@
 .edit_back {
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
+    width: 100%;
 }
 
 .box_back button{
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
+    text-decoration: none;
 
 }
-/* show_contact */
+
 .card_contact {
     display: flex;
     flex-direction: column;

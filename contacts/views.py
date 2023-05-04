@@ -19,6 +19,14 @@ def show_contact(request, id_contact):
                   {'contact': contact, 'id_contact': id_contact}
                  )
 
+def edit_contact(request, id_contact):
+    contact = get_object_or_404(Contact, id=id_contact)
+
+    return render(request,
+                  "edit_contact.html",
+                  {'contact': contact, 'id_contact': id_contact}
+            )
+
 def image_avatar(request):
     avatar = Contact.objects.all() # ou qualquer outro filtro
     return render(request,

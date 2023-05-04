@@ -11,17 +11,19 @@
                             <button>
                                 <a href="{% url 'contact_list' %}">
                                     <span class="material-symbols-outlined">
-                                        arrow_back
+                                         arrow_back
                                     </span>
                                     <p>Voltar</p>
                                 </a>
                             </button>
                     </div>
                 </div>
-                <div>
-                        <button>
-                            <span class="material-symbols-outlined card_edit">edit</span>
-                        </button>
+                <div class="go_edit">
+                    <button>
+                        <a href="{% url 'edit_contact' contact.id %}">
+                                <span class="material-symbols-outlined card_edit">edit</span>
+                        </a>
+                    </button>
                 </div>
             </div>
         </header>
