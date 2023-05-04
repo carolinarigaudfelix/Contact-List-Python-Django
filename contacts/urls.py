@@ -5,6 +5,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.contact_list),
+    path('', views.contact_list, name='contact_list'),
     path('<int:id_contact>', views.show_contact, name = 'show_contact'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

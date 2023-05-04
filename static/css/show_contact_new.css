@@ -1,3 +1,64 @@
 *{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+    border-bottom: 0px;
     
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.back_home{
+    justify-content: space-between;
+}
+.back_home a{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center
+}
+
+/* edit part */
+.box_back{
+    background-color: #FAFAFA;
+}
+
+.edit_back {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box_back button{
+    display: flex;
+    justify-content: space-between;
+
+}
+/* show_contact */
+.card_contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap:12px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.card_image img{
+    border-radius: 80px;
+    width: 152px;
+    height: 152px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_show{
+    height: 50%;
+    background-color: #FAFAFA;
+    margin-left: 69px;
+    margin-right: 69px;
 }
