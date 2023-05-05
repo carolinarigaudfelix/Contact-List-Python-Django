@@ -8,6 +8,9 @@
     border-bottom: 0px;
     
 }
+body{
+    background-color: gray;
+}
 .card_list {
     margin-right: 69px;
     margin-left: 100px;

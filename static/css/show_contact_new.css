@@ -6,7 +6,13 @@
     border-bottom: 0px;
     
 }
+body{
+    background-color: gray;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
 
 .back_home{
     justify-content: space-between;

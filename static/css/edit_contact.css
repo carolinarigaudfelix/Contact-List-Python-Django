@@ -1,3 +1,84 @@
 *{
     
 }
+body{
+    background-color: gray;
+}
+.back_bottom{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.back_contact {
+    display: flex;
+    flex-direction: row;
+}
+.back_contact a{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+    justify-content: left;
+}
+
+.back_contact p{
+    font-size: 12px;
+}
+
+.back_contact button{
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    background-color: azure;
+    border: 0px;
+    padding: 0px;
+}
+
+.form_edit {
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+} 
+
+.form_edit label{
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.form_edit input{
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.card_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_image img{
+    border-radius: 80px;
+    width: 152px;
+    height: 152px;
+    display: flex;
+    margin-right: 0px;
+}
+
+.box_edit{
+    margin: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    margin-left: 69px;
+    margin-right: 69px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_edit form{
+    justify-content: center;
+    align-items: center;
+}

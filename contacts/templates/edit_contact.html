@@ -3,5 +3,33 @@
 {% block content %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />   
     <link rel="stylesheet" href="{% static "css/edit_contact.css" %}">
-    <h1>AEE</h1>
+    <section class="box_edit">
+        <header class = "back_bottom">
+            <div class="back_contact">
+                    <button>
+                        <a href="{% url 'show_contact' contact.id %}">
+                            <span class="material-symbols-outlined">
+                                arrow_back
+                            </span>
+                            <p>Editar contato</p>
+                        </a>
+                    </button>
+            </a>
+            </div>
+        </header>
+
+        <div class="card_image">
+            <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
+        </div>
+        <form class="form_edit">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="fname" placeholder="{{ contact.name }}">
+            <label for="email">E-mail</label>
+            <input type="text" id="lname" name="lname" placeholder="{{ contact.email }}">
+            <label for="phone">Phone</label>
+            <input type="text" id="lname" name="lname" placeholder="{{ contact.phone }}">
+            <label for="tag">Tag</label>
+            <input type="text" id="lname" name="lname" placeholder="{{ contact.category }}">
+        </form>
+    </section>
 {% endblock %}
