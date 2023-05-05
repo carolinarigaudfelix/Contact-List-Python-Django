@@ -19,7 +19,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <h1>Seus Contatos</h1>
+    <div class="new_contact">
+        <h1>Your contacts</h1>
+        <button>
+            <a href="{% url 'new_contact' %}">
+                <p>Criar Contato</p>
+            </a>
+        </button>
+    </div>
     {% if contact_list %}      
         {% block content %}
             {% for contact in contact_list %}

@@ -1,6 +1,4 @@
-*{
-    
-}
+
 body{
     background-color: gray;
 }
@@ -45,7 +43,7 @@ body{
 
 .form_edit label{
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .form_edit input{

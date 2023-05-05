@@ -6,8 +6,41 @@
     padding: 0px;
     box-sizing: 0px;
     border-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
     
 }
+.new_contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 69px;
+    margin-left: 69px;
+    margin-bottom: 20px;
+}
+
+.new_contact h1{
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font: weight 600px;
+}
+
+.new_contact button{
+    background-color: #2F80ED;
+    border-radius: 4px;
+}
+
+.new_contact a{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    height: 24px ;
+    width: 94px;
+}
+
 body{
     background-color: gray;
 }
@@ -71,12 +104,7 @@ body{
     background-color: #FAFAFA;
   }
 
-h1{
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    font: weight 600px;
-    margin-bottom: 20px;
-}
+
 
 
 .card_contact h4{

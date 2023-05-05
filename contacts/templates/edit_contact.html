@@ -21,15 +21,17 @@
         <div class="card_image">
             <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
         </div>
-        <form class="form_edit">
-            <label for="fname">Name</label>
-            <input type="text" id="fname" name="fname" placeholder="{{ contact.name }}">
+        <form class="form_edit" action="{% url 'show_contact' contact.id %}" method="post">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="{{ contact.name }}">
             <label for="email">E-mail</label>
-            <input type="text" id="lname" name="lname" placeholder="{{ contact.email }}">
+            <input type="text" id="email" name="email" placeholder="{{ contact.email }}">
             <label for="phone">Phone</label>
-            <input type="text" id="lname" name="lname" placeholder="{{ contact.phone }}">
-            <label for="tag">Tag</label>
-            <input type="text" id="lname" name="lname" placeholder="{{ contact.category }}">
+            <input type="text" id="phone" name="phone" placeholder="{{ contact.phone }}">
+            {% comment %} <label for="tag">Tag</label>
+            <input type="text" id="tag" name="category" placeholder="{{ contact.category }}"> {% endcomment %}
+            <input type="submit" value="Save">
         </form>
     </section>
 {% endblock %}
