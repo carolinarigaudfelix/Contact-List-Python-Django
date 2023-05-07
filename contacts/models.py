@@ -1,22 +1,30 @@
 # Create your models here.
 from django.db import models
-from django.utils import timezone
+from phonenumber_field.modelfields import PhoneNumberField
+from django import forms
 
-class Category(models.Model):
-    name = models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.name
-
+CATEGORY_CHOICES = (
+    ('family', 'Family'),
+    ('friend', 'Friend'),
+    ('work', 'Work'),
+    ('unknow', 'Unknow'),
+)
 
 class Contact(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.CharField(max_length=256, null=True, blank=True)
-    phone = models.CharField(max_length=256)
     image = models.ImageField(upload_to='images/')
-    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
-    creation_date = models.DateTimeField(default=timezone.now)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=20)
+    category = models.CharField(max_length=10, choices=CATEGORY_CHOICES, default='family')
 
+    def get_image_url(self):
+        if self.image:
+            return self.image.url
+        else:
+            return None
+        
     def __str__(self):
         return self.name
     
+

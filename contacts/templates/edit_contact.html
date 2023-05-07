@@ -14,23 +14,23 @@
                             <p>Editar contato</p>
                         </a>
                     </button>
-            </a>
             </div>
         </header>
 
         <div class="card_image">
             <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
         </div>
-        <form class="form_edit" action="{% url 'show_contact' contact.id %}" method="post">
+        <form class="form_edit" action="{% url 'show_contact' contact.id %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
+            <input type="file" id="image" name="image" value="{{ contact.image }}">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="{{ contact.name }}">
+            <input type="text" id="name" name="name" value="{{ contact.name }}">
             <label for="email">E-mail</label>
-            <input type="text" id="email" name="email" placeholder="{{ contact.email }}">
+            <input type="text" id="email" name="email" value="{{ contact.email }}">
             <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="{{ contact.phone }}">
-            {% comment %} <label for="tag">Tag</label>
-            <input type="text" id="tag" name="category" placeholder="{{ contact.category }}"> {% endcomment %}
+            <input type="text" id="phone" name="phone" value="{{ contact.phone }}">
+            
+            
             <input type="submit" value="Save">
         </form>
     </section>

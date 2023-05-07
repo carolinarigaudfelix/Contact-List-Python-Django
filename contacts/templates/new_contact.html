@@ -1,0 +1,36 @@
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+    <link rel="stylesheet" href="{% static "css/new_contact.css" %}">
+    
+    <section class="box_edit">
+        <header class = "back_bottom">
+            <div class="back_contact">
+                    <button>
+                        <a href="{% url 'contact_list' %}">
+                            <span class="material-symbols-outlined">
+                                arrow_back
+                            </span>
+                            <p>New Contact</p>
+                        </a>
+                    </button>
+            </div>
+        </header>
+        <div class="card_image">
+            {% if contact.image %}
+                <img src="{{ contact.get_image_url }}" alt="{{ contact.name }}">
+            {% else %}
+                <span class="material-symbols-outlined">person</span>
+            {% endif %}
+        </div>
+
+        <form class="form_edit" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="New Contact">
+        </form>
+
+    </section>
+{% endblock %}
