@@ -47,7 +47,7 @@ def new_contact(request):
 
     
 
-    
+#     Fix Image Upload
 
 def edit_contact(request, id_contact):
     contact = get_object_or_404(Contact, id=id_contact)
