@@ -48,7 +48,7 @@ def new_contact(request):
 
     
 
-    
+#     Fix Image Upload
 
 def edit_contact(request, id_contact):
     
