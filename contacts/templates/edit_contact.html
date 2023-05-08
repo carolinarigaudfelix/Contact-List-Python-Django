@@ -18,10 +18,11 @@
         </header>
 
         <div class="card_image">
-            <img src="{{ contact.image.url }}" alt="Imagem"  height="42" width="42">
+            <img src="{{ contact.get_image_url  }}" alt="Imagem"  height="42" width="42">
         </div>
-        <form class="form_edit" action="{% url 'show_contact' contact.id %}" method="post" enctype="multipart/form-data">
+        <form class="form_edit" method="post" action="{% url 'show_contact' contact.id %}"  enctype="multipart/form-data">
             {% csrf_token %}
+            <label for="image">Image</label>
             <input type="file" id="image" name="image" value="{{ contact.image }}">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="{{ contact.name }}">
@@ -29,7 +30,8 @@
             <input type="text" id="email" name="email" value="{{ contact.email }}">
             <label for="phone">Phone</label>
             <input type="text" id="phone" name="phone" value="{{ contact.phone }}">
-            
+            <label for="category">Category</label>
+            <input type="text" id="category" name="category" value="{{ contact.category }}">
             
             <input type="submit" value="Save">
         </form>

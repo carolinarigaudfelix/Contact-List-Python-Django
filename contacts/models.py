@@ -1,7 +1,7 @@
 # Create your models here.
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
-from django import forms
+
+
 
 
 CATEGORY_CHOICES = (
@@ -26,5 +26,6 @@ class Contact(models.Model):
         
     def __str__(self):
         return self.name
+    
     
 

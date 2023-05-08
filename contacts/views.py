@@ -6,24 +6,24 @@ from django.http import HttpResponse
 
 def show_contact(request, id_contact):
     contact = get_object_or_404(Contact, id=id_contact)
+    print(contact)
     if request.method == 'POST':
-        name = request.POST.get('name')
-        if name: # Verifica se o campo name está preenchido
-            contact.name = request.POST.get('name')
-            contact.email = request.POST.get('email')
-            contact.phone = request.POST.get('phone')
-            contact.save()
-            return redirect('show_contact', id_contact=id_contact)
-        else:
+        #name = request.POST.get('name')
+        form = MyForm(request.POST, request.FILES,instance=contact)
+
+        # if name: # Verifica se o campo name está preenchido
+            # contact.image = request.POST.get('image')
+            # contact.name = request.POST.get('name')
+            # contact.email = request.POST.get('email')
+            # contact.phone = request.POST.get('phone')
+            # contact.save()
+        form.save()
+        return redirect('show_contact', id_contact=id_contact)
+        # else:
             # Caso contrário, retorna uma mensagem de erro ou renderiza um template com uma mensagem de erro
-            return HttpResponse("O campo nome é obrigatório")
-    else:
-        {
-            'name': contact.name,
-            'email': contact.email,
-            'phone': contact.phone,
-            'category': contact.category,
-        }
+        return HttpResponse("O campo nome é obrigatório")
+
+       
     return render(request, 'show_contact_new.html', {'contact': contact, 'id_contact': id_contact})
 
 def contact_list(request):
@@ -39,6 +39,7 @@ def new_contact(request):
     if request.method == 'POST':
         form = MyForm(request.POST, request.FILES)
         if form.is_valid():
+    
             form.save()
             return redirect('contact_list')
     else:
@@ -50,8 +51,9 @@ def new_contact(request):
     
 
 def edit_contact(request, id_contact):
+    
     contact = get_object_or_404(Contact, id=id_contact)
-
+    
     return render(request,
                   "edit_contact.html",
                   {'contact': contact, 'id_contact': id_contact}
