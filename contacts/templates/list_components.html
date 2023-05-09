@@ -16,11 +16,18 @@
          </div>
       </div> 
         <div class="card_button">
-          <form action="{% url 'show_contact' contact.id %}">
-            <button>
-                  <span class="material-symbols-outlined card_edit">edit</span>
-            </button>
-          </form>
+            <form action="{% url 'show_contact' contact.id %}">
+                  <button>
+                        <span class="material-symbols-outlined card_edit">edit</span>
+                  </button>
+            </form>
+      
+            <form action="{% url 'delete_contact' contact.id %}" method="POST">
+                  {% csrf_token %}
+                  <button>
+                        <span class="material-symbols-outlined">delete</span>
+                  </button>
+            </form>
         </div>
 </div>
   

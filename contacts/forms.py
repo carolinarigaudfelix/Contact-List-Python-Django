@@ -13,7 +13,7 @@ CATEGORY_CHOICES = (
 class MyForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['name', 'email', 'phone', 'image', 'category']
+        fields = ['image', 'name', 'email', 'phone', 'category']
 
 
 
