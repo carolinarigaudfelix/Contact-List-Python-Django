@@ -4,12 +4,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />   
     <link rel="stylesheet" href="{% static "css/show_contact_new.css" %}">
+    
+    <header class="main-header">
+        <h1>Contact List</h1>
+    </header>
     <section class="box_show">
         <header class="box_back">
             <div class="edit_back">
                 <div  class="back_home">
-                    <div>
-                            <button>
+                            <button class="button_edit">
                                 <a href="{% url 'contact_list' %}">
                                     <span class="material-symbols-outlined">
                                          arrow_back
@@ -18,7 +21,6 @@
                                 </a>
                             </button>
                             
-                    </div>
                 </div>
                 <div class="go_edit">
                     <button>
@@ -36,10 +38,16 @@
                 </div>
                 <div class="card_text">
                     <h4>{{ contact.name }}</h4>
-                    <span>{{ contact.category  }}</span>
                     <br>
-                    <p>{{ contact.phone }}</p>
-                    <p>{{ contact.email }}</p>
+                    <p class ="e-mail" >E-mail: {{ contact.email }}</p>
+                    <div class = "phone_block">
+                        <p class="phone">Phone:</p>
+                        <p>{{ contact.phone }}</p>
+                    </div>
+                    <div class="category_block">
+                        <span class="tag">Tag:</span>
+                        <span class="options">{{ contact.category  }}</span>
+                    </div>
                 </div>
             </div>
         </div>
