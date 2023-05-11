@@ -24,13 +24,13 @@
             {% csrf_token %}
             <label for="image">Image</label>
             <input type="file" id="image" name="image" value="{{ contact.image }}">
-            <label for="name">Name</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{ contact.name }}">
-            <label for="email">E-mail</label>
+            <label for="email">E-mail:</label>
             <input type="text" id="email" name="email" value="{{ contact.email }}">
-            <label for="phone">Phone</label>
+            <label for="phone">Phone:</label>
             <input type="text" id="phone" name="phone" value="{{ contact.phone }}">
-            <label for="category">Category</label>
+            <label for="category">Category:</label>
             <input type="text" id="category" name="category" value="{{ contact.category }}">
             
             <input type="submit" value="Save">

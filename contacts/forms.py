@@ -4,16 +4,20 @@ from .models import Contact
 
 
 CATEGORY_CHOICES = (
-    ('family', 'Family'),
-    ('friend', 'Friend'),
-    ('work', 'Work'),
-    ('unknown', 'Unknown'),
+    ('FAMILY', 'Family'),
+    ('FRIEND', 'Friend'),
+    ('WORK', 'Work'),
+    ('UNKNOWN', 'Unknown'),
 )
 
 class MyForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ['image', 'name', 'email', 'phone', 'category']
-
-
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'Enter name'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Enter email'}),
+            'phone': forms.TextInput(attrs={'placeholder': 'Ex: +5521900000000'}),
+            'category': forms.Select(choices=CATEGORY_CHOICES, attrs={'class': 'form-select'})
+        }
 

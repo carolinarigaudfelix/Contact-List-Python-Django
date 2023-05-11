@@ -10,9 +10,6 @@
 }
 
 
-
-
-
 .main-header{
     font-size: 12px;
     margin-bottom: 32px;
@@ -21,7 +18,7 @@
     width: 100%;
 }
 .main-header h1{
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 68px;
     margin-right: 68px;
     margin-bottom: 8px;
@@ -195,4 +192,5 @@ a{
     margin-right: 69px;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.05);
 }
