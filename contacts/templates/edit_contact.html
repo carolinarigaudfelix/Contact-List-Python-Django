@@ -11,7 +11,7 @@
                             <span class="material-symbols-outlined">
                                 arrow_back
                             </span>
-                            <p>Editar contato</p>
+                            <p>Edit Contact</p>
                         </a>
                     </button>
             </div>
@@ -22,7 +22,6 @@
         </div>
         <form class="form_edit" method="post" action="{% url 'show_contact' contact.id %}"  enctype="multipart/form-data">
             {% csrf_token %}
-            <label for="image">Image</label>
             <input type="file" id="image" name="image" value="{{ contact.image }}">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{ contact.name }}">
@@ -31,9 +30,13 @@
             <label for="phone">Phone:</label>
             <input type="text" id="phone" name="phone" value="{{ contact.phone }}">
             <label for="category">Category:</label>
-            <input type="text" id="category" name="category" value="{{ contact.category }}">
-            
-            <input type="submit" value="Save">
+                <select id ="category" name="{{ contact.category }}">
+                    <option value="family">Family</option>
+                    <option value="friend">Friend</option>
+                    <option value="work">Work</option>
+                    <option value="unknow">Unknow</option>
+                </select>
+            <input type="submit" id="submit" value="Save">
         </form>
     </section>
 {% endblock %}
