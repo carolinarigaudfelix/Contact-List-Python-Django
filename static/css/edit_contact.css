@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url(variables.css);
 .back_bottom{
     display: flex;
     justify-content: left;
@@ -66,7 +67,7 @@
     margin: 0 auto 0 0;
     display: flex;
     flex-direction: column;
-    background-color: #FAFAFA;
+    background-color: var(--w-200);
     box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
     margin-left: 69px;
     margin-right: 69px;
@@ -80,9 +81,6 @@
     align-items: center;
 }
 
-.form_edit fo{
-    color: pink;
-}
 
 #name ,#email, #category{
     width: 280px;
@@ -96,5 +94,5 @@
 }
 
 .back_contact button{
-    background-color: #FAFAFA;
+    background-color: var(--w-200);
 }

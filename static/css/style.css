@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+@import url(variables.css);
 *{
     margin: 0px;
     border: 0px;
@@ -48,14 +48,13 @@ h1 {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;   
-    border-bottom: 1px solid #2F80ED;
+    border-bottom: 1px solid var(--bl-100);
     
 }
 
 .new_contact button{
-    background-color: #2F80ED; 
+    background-color: var(--bl-100); 
     border-radius: 4px;
-    /* ###################################################### */
 }
 
 .new_contact a{
@@ -120,12 +119,12 @@ h1 {
 }
 
 .card_button button span:nth-child(even) {
-    background-color: #FFFFFF;
+    background-color: var(--w-100);
   }
   
 
 .card_button button span:nth-child(odd) {
-    background-color: #FAFAFA;
+    background-color: var(--w-200);
 }
 
 
@@ -134,17 +133,17 @@ h1 {
     padding: 0px;
     border: 0px;
     align-items: center;
-    background-color:#FFFFFF ;
+    background-color: var(--w-100);
     display: inline-block;
 }
 
 .card_contact:nth-child(even) {
-    background-color: #FFFFFF;
+    background-color: var(--w-100);
   }
   
   /* para elementos ímpares */
   .card_contact:nth-child(odd) {
-    background-color: #FAFAFA;
+    background-color: var(--w-200);
   }
 
 
@@ -163,17 +162,17 @@ h1 {
     margin-left: 16px;
     font-size: 10px;  
     font-weight: 300;
-    color: #2F80ED;
+    color: var(--bl-100);
     border-radius: 10px;
-    background-color: #E5F0FF;
+    background-color: var(--w-500);
     justify-content: center;
     width: 44px;
     display: inline-flex;
 }
- /* ###################################################### */
+
 
 .card_text p{
-   color: #4F4F4F;
+   color: var(--b-100);
 }
 
 .card_contact p{

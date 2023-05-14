@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url(variables.css);
+
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -20,7 +22,7 @@
     font-size: 12px;
     margin-bottom: 19px;
     width: 100%;
-    border-bottom: 1px solid #F5F5F5;
+    border-bottom: 1px solid --w-300;
     width: 100%;
 }
 .main-header h1{
@@ -43,7 +45,7 @@ h1 {
     display: flex;
     justify-content: left;
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: var(--w-200);
 }
 
 .back_contact {
@@ -58,7 +60,7 @@ h1 {
     align-items: center;
     color: black;
     justify-content: left;
-    background-color: #FAFAFA;
+    background-color: var(--w-200);
 }
 
 .back_contact p{
@@ -97,7 +99,7 @@ form_edit {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F2F2F2;
+    background-color: var(--w-400);
     height: 110px;
     width: 110px;
     border-radius: 80px;
@@ -115,7 +117,7 @@ form_edit {
     margin: 0 auto 0 0;
     display: flex;
     flex-direction: column;
-    background-color: #FAFAFA;
+    background-color: var(--w-100);
     margin-left: 69px;
     margin-right: 69px;
     justify-content: center;
