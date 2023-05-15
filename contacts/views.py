@@ -39,10 +39,16 @@ def new_contact(request):
 def edit_contact(request, id_contact):
     contact = get_object_or_404(Contact, id=id_contact)
     
-    return render(request,
-                  "edit_contact.html",
-                  {'contact': contact, 'id_contact': id_contact}
-            )
+    if request.method == 'POST':
+        form = MyForm(request.POST, request.FILES, instance=contact)
+        if form.is_valid():
+            form.save()
+            return redirect('show_contact', id_contact=id_contact)
+    else:
+        form = MyForm(instance=contact)
+
+    context = {'contact': contact, 'id_contact': id_contact, 'form': form}
+    return render(request, "edit_contact.html", context)
 
 def delete_contact(request, id_contact): 
     contact = get_object_or_404(Contact, id=id_contact)
