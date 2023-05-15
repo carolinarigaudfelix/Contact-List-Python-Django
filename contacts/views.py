@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from .models import Contact
 from .forms import MyForm
 
@@ -16,11 +17,19 @@ def show_contact(request, id_contact):
     return render(request, 'show_contact_new.html', {'contact': contact, 'id_contact': id_contact})
 
 def contact_list(request):
-    list_contacts = Contact.objects.all()
+    contact_list = Contact.objects.all()
+    paginator = Paginator(contact_list, 4)
+
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'contact_list': page_obj,
+    }
 
     return render(request, 
                 'base.html', 
-                {'contact_list': list_contacts}
+                context
                 )
 
 

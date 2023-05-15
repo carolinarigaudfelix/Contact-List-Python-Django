@@ -1,0 +1,22 @@
+{% load static %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />   
+  <link rel="stylesheet" href="{% static "css/paginator.css" %}">
+{% if contact_list %}
+  <div class="pagination">
+    <span class="step-links">
+        {% if contact_list.has_previous %}
+            <a href="?page=1&q={{ request.GET.q.strip }}">&laquo; first</a>
+            <a href="?page={{ contact_list.previous_page_number }}&q={{ request.GET.q.strip }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ contact_list.number }} of {{ contact_list.paginator.num_pages }}.
+        </span>
+
+        {% if contact_list.has_next %}
+            <a href="?page={{ contact_list.next_page_number }}&q={{ request.GET.q.strip }}">next</a>
+            <a href="?page={{ contact_list.paginator.num_pages }}&q={{ request.GET.q.strip }}">last &raquo;</a>
+        {% endif %}
+    </span>
+  </div>
+{% endif %}
