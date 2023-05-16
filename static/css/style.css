@@ -40,6 +40,7 @@ h1 {
     margin-right: 69px;
     margin-left: 69px;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .new_contact h1{
@@ -55,13 +56,28 @@ h1 {
 .new_contact button{
     background-color: var(--bl-100); 
     border-radius: 4px;
+    text-decoration-line: none;
+}
+
+.new_contact p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    border: none;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+.new_contact button a {
+    text-decoration: none;
 }
 
 .new_contact a{
+    text-decoration: none;
     align-items: center;
     justify-content: center;
     display: flex;
-    text-decoration: none;
     color: white;
     height: 24px ;
     width: 94px;

@@ -22,6 +22,16 @@
     <header class="main-header">
         <h1>Contact List</h1>
     </header>
+
+
+    <div class = "search">
+        <form action = "{% url 'contact_list' %}"  method="GET">
+            <input type="text" name = "name" id = "name" placeholder = "Name">
+            <button type = "submit">Search</button>
+        </form>
+    </div>
+
+
     <div class="new_contact">
         <h1>Your contacts</h1>
         <button>

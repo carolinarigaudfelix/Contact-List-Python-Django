@@ -14,7 +14,7 @@
         </span>
 
         {% if contact_list.has_next %}
-            <a href="?page={{ contact_list.next_page_number }}&q={{ request.GET.q.strip }}">next</a>
+            <a href="?page={{ contact_list.contacts.next_page_number }}&q={{ request.GET.q.strip }}">next</a>
             <a href="?page={{ contact_list.paginator.num_pages }}&q={{ request.GET.q.strip }}">last &raquo;</a>
         {% endif %}
     </span>
