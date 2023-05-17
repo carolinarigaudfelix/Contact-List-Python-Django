@@ -32,8 +32,7 @@ def show_contact(request, id_contact):
     return render(request, 'show_contact_new.html', {'contact': contact, 'id_contact': id_contact})
 
 def contact_list(request):
-    if request.method == 'GET':
-        txt_name = request.GET.get('name')
+    txt_name = request.GET.get('name')
     if txt_name:
         contacts = Contact.objects.filter(name__icontains=txt_name)
         paginator = Paginator(contacts, 4)
@@ -44,10 +43,13 @@ def contact_list(request):
         paginator = Paginator(contacts, 4)
         page_number = request.GET.get("page")
         page_obj = paginator.get_page(page_number)
+    
         
     context = {
         'contact_list': page_obj,
+        'txt_name': txt_name,
     }
+    
     return render(request, 'base.html', context)
 
 
