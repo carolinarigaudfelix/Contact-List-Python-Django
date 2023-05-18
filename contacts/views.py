@@ -49,11 +49,8 @@ def contact_list(request):
         'contact_list': page_obj,
         'txt_name': txt_name,
     }
-    
+
     return render(request, 'base.html', context)
-
-
-
 
 def new_contact(request):
     if request.method == 'POST':
@@ -65,7 +62,6 @@ def new_contact(request):
     else:
         form = MyForm()
     return render(request, 'new_contact.html', {'form': form})
-
 
 def edit_contact(request, id_contact):
     contact = get_object_or_404(Contact, id=id_contact)

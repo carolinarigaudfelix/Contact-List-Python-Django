@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url(variables.css);
+/* CSS Principal Page (FIX(New Contact, Paginator and Search) */
 *{
     margin: 0px;
     border: 0px;
