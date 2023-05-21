@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
@@ -26,8 +28,9 @@
 
     <div class = "search">
         <form action = "{% url 'contact_list' %}"  method="GET">
-            <input type="text" name = "name" id = "name" placeholder = "Name">
-            <button type = "submit">Search</button>
+            <input type="text" name = "name" id = "name" placeholder = "Name" >
+            
+            <button type = "submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
 
