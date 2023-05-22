@@ -10,6 +10,15 @@
     font-family: 'Roboto', sans-serif;
     
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 68
+}
+
 .search{
     display: flex;
     align-items: center;
@@ -39,7 +48,6 @@ input:focus, input:focus {
 .main-header{
     font-size: 12px;
     margin-bottom: 32px;
-    width: 100%;
     border-bottom: 1px solid #F5F5F5;
     width: 100%;
 }
@@ -121,7 +129,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 56px;
+    height: clamp(80px,60vw,56px);
     gap:12px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
@@ -129,6 +137,7 @@ h1 {
     margin-left: 69px;
     margin-right: 69px;
     align-items: center;
+
 }
 
 .card_button{
@@ -224,8 +233,55 @@ h1 {
 }
 .card_image img {
     border-radius: 32px;
-    width: 55px;
-    height: 52px;
+    width: 62px;
+    height: 62px;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 320px){
+
+    .card_contact{
+        margin-left: 32px;
+        margin-right: 32px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .card_image img {
+        width: 56px;
+        height: 56px;
+        margin-left: 12px;
+    }
+
+    .card_contact h4{
+        font-size: max(1vw, 12px);
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .card_contact{
+        margin-left: 44px;
+        margin-right: 44px;
+    }
+    .card_button button span{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .card_contact h4{
+        font-size: max(1vw, 18px);
+    }
+
+    .card_contact{
+        margin-left: 69px;
+        margin-right: 69px;
+    }
+
+    .card_button button span{
+        font-size: 18px;
+    }
+
 }
