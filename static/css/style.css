@@ -17,10 +17,23 @@
     flex-direction: row;
     align-content: center;
     margin-left: 70px;
-
+    margin-bottom: 12px;
 }
+.search form{
+    border-radius: 2px;
+    border-bottom: 1px solid var(--b-100);
+}
+
+input:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+
 .search button{
-    background-color: white
+    background-color: white;
+    color: gray;
+    cursor: pointer;
 }
 
 .main-header{
