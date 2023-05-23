@@ -255,11 +255,46 @@ h1 {
         margin-left: 12px;
     }
 
+    .card_contact span{
+        margin-left: 0px;
+    }
     .card_contact h4{
-        font-size: max(1vw, 12px);
+        font-size: max(1vw, 14px);
+    }
+    
+    .info_name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        gap:4px;
+        margin-bottom: 10px;
     }
 
+    .info_contact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: left;
+        gap:10px
+    }
+
+    .new_contact{
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .pagination{
+        margin-bottom: 24px;
+    }
 }
+
+
 
 @media screen and (min-width: 768px){
     .card_contact{
@@ -268,6 +303,9 @@ h1 {
     }
     .card_button button span{
         font-size: 18px;
+    }
+    .card_contact h4{
+        font-size: max(1vw, 16px);
     }
 }
 @media screen and (min-width: 1200px){

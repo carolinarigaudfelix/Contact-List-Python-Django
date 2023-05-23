@@ -7,11 +7,14 @@
                   <img src="{{ contact.get_image_url }}" alt="Imagem"  height="42" width="42">
             </div>
             <div class="card_text">
-                  <h4>{{ contact.name }}</h4>
-                  <span>{{ contact.category  }}</span>
-                  <br>
-                  <p>{{ contact.phone }}</p>
-                  <p>{{ contact.email }}</p>
+                  <div class = "info_name">
+                        <h4>{{ contact.name }}</h4>
+                        <span>{{ contact.category  }}</span>
+                  </div>
+                  <div class = "info_contact">
+                        <p>{{ contact.phone }}</p>
+                        <p>{{ contact.email }}</p>
+                  </div>
             </div>
             </div> 
             <div class="card_button">

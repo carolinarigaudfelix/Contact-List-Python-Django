@@ -34,12 +34,12 @@ def show_contact(request, id_contact):
 def contact_list(request):
     txt_name = request.GET.get('name')
     if txt_name:
-        contacts = Contact.objects.filter(name__icontains=txt_name)
+        contacts = Contact.objects.filter(name__icontains=txt_name).order_by('name')
         paginator = Paginator(contacts, 8)
         page_number = request.GET.get("page")
         page_obj = paginator.get_page(page_number)
     else:
-        contacts = Contact.objects.all()
+        contacts = Contact.objects.all().order_by('name')
         paginator = Paginator(contacts, 8)
         page_number = request.GET.get("page")
         page_obj = paginator.get_page(page_number)

@@ -14,8 +14,14 @@
         </span>
 
         {% if contact_list.has_next %}
-          <a href="?page={{ contact_list.next_page_number }}&name={{ txt_name }}">next</a>
-          <a href="?page={{ contact_list.paginator.num_pages }}&name={{ txt_name }}">last &raquo;</a>
+          {% if txt_name %}
+            <a href="?page={{ contact_list.next_page_number }}&name={{ txt_name }}">next</a>
+            <a href="?page={{ contact_list.paginator.num_pages }}&name={{ txt_name }}">last &raquo;</a>
+          {% endif %}
+          {% if not txt_name %}
+            <a href="?page={{ contact_list.next_page_number }}&name={{ name }}">next</a>
+            <a href="?page={{ contact_list.paginator.num_pages }}&name={{ name }}">last &raquo;</a>
+          {% endif %}
         {% endif %}
     </span>
   </div>
