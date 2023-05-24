@@ -18,39 +18,19 @@
     width: 280px;
 }
 
-.main-header{
-    font-size: 12px;
-    margin-bottom: 19px;
-    width: 100%;
-    border-bottom: 1px solid --w-300;
-    width: 100%;
-}
-.main-header h1{
-    font-weight: 500;
-    margin-left: 60px;
-    margin-right: 68px;
-    margin-bottom: 8px;
-}
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
 
 .back_bottom{
     display: flex;
     justify-content: left;
     width: 100%;
-    background-color: var(--w-200);
 }
 
 .back_contact {
     display: flex;
     flex-direction: row;
+    border-radius: 2px;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--w-100);
 }
 .back_contact a{
     display: flex;
@@ -75,22 +55,12 @@ h1 {
     padding: 0px;
 }
 
-form_edit {
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    align-items: flex-start;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.form_edit label{
+.form_create label{
     display: flex;
     margin-bottom: 8px;
 }
 
-.form_edit input{
+.form_create input{
     display: flex;
     margin-bottom: 12px;
 }
@@ -113,7 +83,7 @@ form_edit {
     margin-right: 0px;
 }
 
-.box_edit{
+.box_create{
     margin: 0 auto 0 0;
     display: flex;
     flex-direction: column;
@@ -125,7 +95,107 @@ form_edit {
 
 }
 
-.form_edit form{
+.form_create form{
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 320px){
+    .card_image{
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        margin-right: 0px;
+    }
+
+    .card_image span{
+        font-size: 48px;
+    }
+    #id_name, #id_email, #id_category{
+        width: 400px;
+        font-size: 48px;
+    }
+    #id_phone{
+        width: 50%;
+        font-size: 32px;
+    }
+    label[for="id_name"], label[for="id_email"], label[for="id_category"], label[for="id_image"], label[for="id_phone"] {
+        font-size: 32px;
+    }
+
+    input#id_image{
+        font-size: 32px;
+    }
+    .main-header {
+        margin-bottom: 16px;
+        margin-top: 20px;
+      }
+      
+    .main-header h1 {
+        font-size: 32px !important;
+    }
+    .form_create p{
+        margin-bottom: 32px;
+    }
+    .form_create #submit{
+        margin-top: 24px;
+        font-size: 36px;
+    }
+    .form-select option{
+        font-size: 20px;
+    }
+    .back_bottom p, .material-symbols-outlined{
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card_image{
+        border-radius: 100%;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        margin-right: 0px;
+    }
+
+    .card_image span{
+        font-size: 48px;
+    }
+    #id_name, #id_email, #id_category{
+        width: 200px;
+        font-size: 16px;
+    }
+    #id_phone{
+        width: 50%;
+        font-size: 16px;
+    }
+    label[for="id_name"], label[for="id_email"], label[for="id_category"], label[for="id_image"], label[for="id_phone"] {
+        font-size: 20px;
+    }
+
+    input#id_image{
+        font-size: 16px;
+    }
+    .main-header {
+        margin-bottom: 16px;
+        margin-top: 20px;
+      }
+      
+    .main-header h1 {
+        font-size: 300% !important;
+    }
+    .form_create p{
+        margin-bottom: 16px;
+    }
+    .form_create #submit{
+        margin-top: 24px;
+        font-size: 18px;
+    }
+    .form-select option{
+        font-size: 18px;
+    }
+    .back_bottom p, .material-symbols-outlined{
+        font-size: 16px;
+    }
 }

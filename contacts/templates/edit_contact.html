@@ -21,9 +21,7 @@
             </div>
         </header>
 
-        <div class="card_image">
-            <img src="{{ contact.get_image_url  }}" alt="Imagem"  height="42" width="42">
-        </div>
+        <img src="{{ contact.get_image_url  }}" alt="Imagem"  height="42" width="42">
         <form class="form_edit" method="post" action="{% url 'show_contact' contact.id %}"  enctype="multipart/form-data">
             {% csrf_token %}
             <input type="file" id="image" name="image" value="{{ contact.image }}">

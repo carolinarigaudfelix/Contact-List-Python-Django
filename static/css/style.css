@@ -44,16 +44,6 @@ input:focus, input:focus {
     cursor: pointer;
 }
 
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-
 .new_contact{
     display: flex;
     justify-content: space-between;
@@ -208,19 +198,21 @@ h1 {
 }
 
 .card_contact p{
-    font-size: 10px;
+    font-size: 16px;
     display: inline-block;
     margin-right: 28px;
 }
-.card_image img {
-    border-radius: 32px;
-    width: 62px;
-    height: 62px;
-    justify-content: center;
-    align-items: center;
-}
 
 @media screen and (min-width: 320px){
+
+    .main-header {
+        margin-bottom: 16px;
+        margin-top: 20px;
+      }
+      
+    .main-header h1 {
+        font-size: 32px !important;
+    }
 
     .card_contact{
         margin-left: 32px;
@@ -240,10 +232,10 @@ h1 {
         margin-right: 0px;
     }
 
-    .card_image img {
+    img{
         width: 56px;
         height: 56px;
-        margin-left: 12px;
+        border-radius:100%;
     }
 
     .card_contact span{
@@ -258,8 +250,9 @@ h1 {
         flex-direction: row;
         align-items: center;
         justify-items: center;
-        gap:4px;
-        margin-bottom: 10px;
+
+        margin-bottom: 6px;
+        
     }
 
     .info_contact{
@@ -267,7 +260,7 @@ h1 {
         flex-direction: column;
         align-items: flex-start;
         justify-items: left;
-        gap:10px
+        margin-bottom: 14px;
     }
 
     .new_contact{
@@ -284,15 +277,20 @@ h1 {
 
 
 @media screen and (min-width: 768px){
+    img {
+        width: 76px;
+        height: 76px;
+        border-radius:100%;
+    }
     .card_contact{
         margin-left: 44px;
         margin-right: 44px;
     }
     .card_button button span{
-        font-size: 18px;
+        font-size: 24px;
     }
     .card_contact h4{
-        font-size: max(1vw, 16px);
+        font-size: max(1vw, 18px);
     }
     .new_contact{
         display: flex;
@@ -306,6 +304,13 @@ h1 {
         margin-left: 44px;
     }
 
+    .main-header {
+        margin-bottom: 16px;
+      }
+      
+    .main-header h1 {
+        font-size: 44px !important;
+    }
     
 }
 @media screen and (min-width: 1200px){

@@ -2,21 +2,14 @@
 @import url(variables.css);
 
 .main-header{
-    margin-top: 20px;
-    margin-bottom: 32px;
     width: 100%;
     border-bottom: 1px solid --w-300;
+    margin-top: 0 auto;
 }
 .main-header h1{
-    font-size: 2em;
+    font-size: 64px;
     font-weight: 500;
     margin-left: 68px;
     margin-right: 68px;
-    margin-bottom: 8px;
     font-family: 'Roboto', sans-serif;
-}
-
-
-h1 {
-    font-size: 2em;
 }

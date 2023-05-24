@@ -8,7 +8,7 @@
     <header class="main-header">
         <h1>Contact List</h1>
     </header>
-    <section class="box_edit">
+    <section class="box_create">
         <header class = "back_bottom">
             <div class="back_contact">
                     <button>
@@ -29,10 +29,10 @@
             {% endif %}
         </div>
 
-        <form class="form_edit" method="post" enctype="multipart/form-data">
+        <form class="form_create" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="New Contact">
+            <input id="submit" type="submit" value="New Contact">
         </form>
 
     </section>
