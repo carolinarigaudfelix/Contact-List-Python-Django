@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 from .models import Contact
 from .forms import MyForm
+from django.contrib import messages
 
 
 def index(request):
@@ -82,8 +83,10 @@ def delete_contact(request, id_contact):
     contact.delete()
 
     if request.method == 'POST':
+        messages.info(request, 'Your password has been changed successfully!')
         return redirect('contact_list')
-    
+        
+    messages.info(request, 'Your password has been changed successfully!')
     return render(request, 'show_contact_new.html', {'contact': contact, 'id_contact': id_contact})
 
 

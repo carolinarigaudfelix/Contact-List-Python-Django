@@ -1,33 +1,39 @@
 
 {% load static %}
-{% block content %}
-      <div class="card_contact">
-            <div class="card_content">
-                  <img src="{{ contact.get_image_url }}" alt="Imagem"  height="42" width="42">
-            <div class="card_text">
-                  <div class = "info_name">
-                        <h4>{{ contact.name }}</h4>
-                        <span>{{ contact.category  }}</span>
+<head>
+      <script src="static\css\javascript\delete_contact.js"></script>
+</head>
+<body>
+      {% block content %}
+            <div class="card_contact">
+                  <div class="card_content">
+                        <img src="{{ contact.get_image_url }}" alt="Imagem"  height="42" width="42">
+                  <div class="card_text">
+                        <div class = "info_name">
+                              <h4>{{ contact.name }}</h4>
+                              <span>{{ contact.category  }}</span>
+                        </div>
+                        <div class = "info_contact">
+                              <p>{{ contact.phone }}</p>
+                              <p>{{ contact.email }}</p>
+                        </div>
                   </div>
-                  <div class = "info_contact">
-                        <p>{{ contact.phone }}</p>
-                        <p>{{ contact.email }}</p>
+                  </div> 
+                  <div class="card_button">
+                        <form action="{% url 'show_contact' contact.id %}">
+                              <button>
+                                    <span class="material-symbols-outlined card_edit">edit</span>
+                              </button>
+                        </form>
+
+                        <form id =delete-form action="{% url 'delete_contact' contact.id %}" method="POST">
+                              {% csrf_token %}
+                              <button onclick="confirmDelete(event)">
+                                    <span class="material-symbols-outlined">delete</span>
+                              </button>
+                        </form>
                   </div>
             </div>
-            </div> 
-            <div class="card_button">
-                  <form action="{% url 'show_contact' contact.id %}">
-                        <button>
-                              <span class="material-symbols-outlined card_edit">edit</span>
-                        </button>
-                  </form>
-            
-                  <form action="{% url 'delete_contact' contact.id %}" method="POST">
-                        {% csrf_token %}
-                        <button>
-                              <span class="material-symbols-outlined">delete</span>
-                        </button>
-                  </form>
-            </div>
-      </div>
-{% endblock  %}
+      {% endblock  %}
+</body>
+</html>
