@@ -26,7 +26,7 @@
                               </button>
                         </form>
 
-                        <form id =delete-form action="{% url 'delete_contact' contact.id %}" method="POST">
+                        <form id ="delete-form" action="{% url 'delete_contact' contact.id %}" method="POST">
                               {% csrf_token %}
                               <button onclick="confirmDelete(event)">
                                     <span class="material-symbols-outlined">delete</span>

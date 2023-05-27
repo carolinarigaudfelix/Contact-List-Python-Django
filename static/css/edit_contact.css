@@ -159,4 +159,7 @@
         align-items: center;
         margin-bottom: 18px;
     }
+    .form_edit select option{
+        font-size: 18px;
+    }
 }
