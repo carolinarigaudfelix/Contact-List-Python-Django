@@ -99,14 +99,6 @@
 
 @media screen and (min-width: 320px){
 
-    .main-header {
-        margin-bottom: 16px;
-      }
-      
-    .main-header h1 {
-        font-size: 32px !important;
-    }
-
     img{
         border-radius: 100%;
         width: 300px;
@@ -117,17 +109,17 @@
     }
 
     .form_edit label, input, select name{
-        font-size: 22px;
+        font-size: calc(var(--font-2) * 0.6);
     }
     .form_edit input{
         display: flex;
         margin-bottom: 22px;
     }
     .form_edit select option{
-        font-size: 10px;
+        font-size: calc(var(--font-1) * 0.8);
     }
     .form_edit select, .back_contact button span{
-        font-size: 22px;
+        font-size: calc(var(--font-2) * 0.6);
     }
 
     #name, #email, #category{
@@ -138,19 +130,12 @@
     }
     
     .back_contact p{
-        font-size: 32px;
+        font-size: var(--font-2);
     }
     
 }
 
 @media screen and (min-width: 768px){
-    .main-header {
-        margin-bottom: 16px;
-      }
-      
-    .main-header h1 {
-        font-size: 300% !important;
-    }
     img{
         border-radius: 100%;
         width: 224px;
@@ -160,6 +145,6 @@
         margin-bottom: 18px;
     }
     .form_edit select option{
-        font-size: 18px;
+        font-size: calc(var(--font-2) * 0.4);
     }
 }

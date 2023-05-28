@@ -5,11 +5,33 @@
     width: 100%;
     border-bottom: 1px solid --w-300;
     margin-top: 0 auto;
+    text-decoration: none;
+
 }
-.main-header h1{
-    font-size: 64px;
+
+.main-header h1 a{
+    font-size: calc(var(--font-3) * 0.8);
+    text-decoration: none;
     font-weight: 500;
     margin-left: 68px;
     margin-right: 68px;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--w-100);
+    color: var(--b-200);
 }
+
+@media screen and (min-width: 320px){
+    .main-header {
+        margin-bottom: 16px;
+        margin-top: 20px;
+    }
+    .main-header h1 a {
+        font-size: var(--font-2);
+    }
+ }
+
+ @media screen and (min-width: 768px){
+    .main-header h1 a {
+        font-size: var(--font-3);
+    }
+ }

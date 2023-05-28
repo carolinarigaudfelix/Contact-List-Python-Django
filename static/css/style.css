@@ -37,7 +37,6 @@ input:focus, input:focus {
     outline: 0;
 }
 
-
 .search button{
     background-color: white;
     color: gray;
@@ -57,7 +56,7 @@ input:focus, input:focus {
 .new_contact h1{
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: calc(var(--font-2) * 0.6);
     font-family: 'Roboto', sans-serif;
     font-weight: 500;   
     border-bottom: 1px solid var(--bl-100);
@@ -93,7 +92,6 @@ input:focus, input:focus {
     width: 94px;
 }
 
-
 .card_list {
     margin-right: 69px;
     margin-left: 100px;
@@ -106,7 +104,7 @@ input:focus, input:focus {
     flex-wrap: wrap;
     justify-content: space-between;
     height: clamp(80px,60vw,56px);
-    gap:12px;
+    gap:6px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
     margin-bottom: 12px;
@@ -119,7 +117,7 @@ input:focus, input:focus {
 .card_button{
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 8px;
     margin-right: 12px;
     font-family: 'Roboto', sans-serif;
 }
@@ -135,7 +133,7 @@ input:focus, input:focus {
     align-items: center;
 }
 .card_button button span{
-    font-size: 14px;
+    font-size: calc(var(--font-1) * 0.8);
     border-radius: 10px;
     justify-content:center;
     background-color: white;
@@ -146,12 +144,9 @@ input:focus, input:focus {
     background-color: var(--w-100);
   }
   
-
 .card_button button span:nth-child(odd) {
     background-color: var(--w-200);
 }
-
-
 
 .card_button button{
     align-items: center;
@@ -163,16 +158,14 @@ input:focus, input:focus {
     background-color: var(--w-100);
   }
   
-  /* para elementos ímpares */
+
   .card_contact:nth-child(odd) {
     background-color: var(--w-200);
   }
 
 
-
-
 .card_contact h4{
-    font-size: 16px;
+    font-size: var(--font-1);
     font-weight: 500;
 }
 .card_contact h4, span{
@@ -182,7 +175,7 @@ input:focus, input:focus {
 
 .card_text span{
     margin-left: 16px;
-    font-size: 10px;  
+    font-size: calc(var(--font-1) * 0.8);
     font-weight: 300;
     color: var(--bl-100);
     border-radius: 10px;
@@ -198,21 +191,12 @@ input:focus, input:focus {
 }
 
 .card_contact p{
-    font-size: 16px;
+    font-size: var(--font-1);
     display: inline-block;
     margin-right: 28px;
 }
 
 @media screen and (min-width: 320px){
-
-    .main-header {
-        margin-bottom: 16px;
-        margin-top: 20px;
-      }
-      
-    .main-header h1 {
-        font-size: 32px !important;
-    }
 
     .card_contact{
         margin-left: 32px;
@@ -233,8 +217,8 @@ input:focus, input:focus {
     }
 
     img{
-        width: 56px;
-        height: 56px;
+        width: 64px;
+        height: 64px;
         border-radius:100%;
     }
 
@@ -242,7 +226,7 @@ input:focus, input:focus {
         margin-left: 0px;
     }
     .card_contact h4{
-        font-size: max(1vw, 14px);
+        font-size: var(--font-1);
     }
     
     .info_name{
@@ -252,6 +236,7 @@ input:focus, input:focus {
         justify-items: center;
         margin-top: 20px;
         margin-bottom: 6px;
+        gap:10px
         
     }
 
@@ -263,7 +248,6 @@ input:focus, input:focus {
         margin-bottom: 20px;
     }
 
-    
 
     .new_contact{
         gap: 100px;
@@ -276,12 +260,10 @@ input:focus, input:focus {
     }
 }
 
-
-
 @media screen and (min-width: 768px){
     img {
-        width: 76px;
-        height: 76px;
+        width: 90px;
+        height: 90px;
         border-radius:100%;
     }
     .card_contact{
@@ -289,10 +271,11 @@ input:focus, input:focus {
         margin-right: 44px;
     }
     .card_button button span{
-        font-size: 24px;
+        font-size: calc(var(--font-2) * 0.6);
     }
     .card_contact h4{
-        font-size: max(1vw, 18px);
+        font-size: calc(var(--font-2) * 0.6);
+
     }
     .new_contact{
         display: flex;
@@ -305,28 +288,21 @@ input:focus, input:focus {
         justify-content: flex-start;
         margin-left: 44px;
     }
-
-    .main-header {
-        margin-bottom: 16px;
-      }
       
-    .main-header h1 {
-        font-size: 44px !important;
-    }
-    
 }
 @media screen and (min-width: 1200px){
     .card_contact h4{
-        font-size: max(1vw, 18px);
+        font-size: calc(var(--font-2) * 0.6);
     }
 
     .card_contact{
         margin-left: 140px;
         margin-right: 140px;
+        height: 100%;
     }
 
     .card_button button span{
-        font-size: 18px;
+        font-size: calc(var(--font-2) * 0.8);
     }
     .new_contact{
         display: flex;

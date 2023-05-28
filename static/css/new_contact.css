@@ -5,19 +5,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#id_name{
+#id_name, #id_email, #id_category{
     width: 280px;
 }
-
-
-#id_email{
-    width: 280px;
-}
-
-#id_category{
-    width: 280px;
-}
-
 
 .back_bottom{
     display: flex;
@@ -28,7 +18,6 @@
 .back_contact {
     display: flex;
     flex-direction: row;
-    border-radius: 2px;
     box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--w-100);
 }
@@ -40,6 +29,7 @@
     align-items: center;
     color: black;
     justify-content: left;
+    border-radius: 4px;
     background-color: var(--w-200);
 }
 
@@ -110,22 +100,22 @@
     }
 
     .card_image span{
-        font-size: 48px;
+        font-size: calc(var(--font-3) * 0.8);
     }
     #id_name, #id_email, #id_category{
         width: 400px;
-        font-size: 48px;
+        font-size: calc(var(--font-3) * 0.8);
     }
     #id_phone{
         width: 50%;
-        font-size: 32px;
+        font-size: calc(var(--font-2) * 0.8);
     }
     label[for="id_name"], label[for="id_email"], label[for="id_category"], label[for="id_image"], label[for="id_phone"] {
-        font-size: 32px;
+        font-size: var(--font-2);
     }
 
     input#id_image{
-        font-size: 32px;
+        font-size: var(--font-2);
     }
     .main-header {
         margin-bottom: 16px;
@@ -133,20 +123,20 @@
       }
       
     .main-header h1 {
-        font-size: 32px !important;
+        font-size: var(--font-2);
     }
     .form_create p{
-        margin-bottom: 32px;
+        margin-bottom: var(--font-2);
     }
     .form_create #submit{
         margin-top: 24px;
-        font-size: 36px;
+        font-size: calc(var(--font-2) * 0.8);
     }
     .form-select option{
         font-size: 20px;
     }
     .back_bottom p, .material-symbols-outlined{
-        font-size: 32px;
+        font-size: var(--font-2);
     }
 }
 
@@ -160,42 +150,42 @@
     }
 
     .card_image span{
-        font-size: 48px;
+        font-size: var(--font-3);
     }
-    #id_name, #id_email, #id_category{
-        width: 200px;
-        font-size: 16px;
+    #id_name, #id_email{
+        width: 250px;
+        font-size: var(--font-1);
+    }
+    #id_category{
+        font-size: calc(var(--font-2) * 0.6);
+        width: 250px;
     }
     #id_phone{
-        width: 50%;
-        font-size: 16px;
+        width: 60%;
+        font-size: var(--font-1);
     }
     label[for="id_name"], label[for="id_email"], label[for="id_category"], label[for="id_image"], label[for="id_phone"] {
-        font-size: 20px;
+        font-size: calc(var(--font-2) * 0.6);
     }
 
     input#id_image{
-        font-size: 16px;
+        font-size: var(--font-1);
     }
     .main-header {
         margin-bottom: 16px;
         margin-top: 20px;
       }
-      
-    .main-header h1 {
-        font-size: 300% !important;
-    }
     .form_create p{
         margin-bottom: 16px;
     }
     .form_create #submit{
         margin-top: 24px;
-        font-size: 18px;
+        font-size: calc(var(--font-2) * 0.6);
     }
     .form-select option{
-        font-size: 18px;
+        font-size: calc(var(--font-2) * 0.6);
     }
     .back_bottom p, .material-symbols-outlined{
-        font-size: 16px;
+        font-size: var(--font-1);
     }
 }

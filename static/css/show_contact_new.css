@@ -32,25 +32,25 @@
     display: flex;
     justify-content: center;
     align-items: center;;
-    font-size: 20px;
+    font-size: calc(var(--font-2) * 0.6);
 }
 
 .e-mail{
     color: var(--b-200);
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: var(--font-1);
 }
 
 .phone_block{
     display: inline-flex;
     margin-bottom: 16px;
     color: var(--b-100);
-    font-size: 16px;
+    font-size: var(--font-1);
     
 }
 .phone, .tag{
     color:var(--b-100);
-    font-size: 16px;
+    font-size: var(--font-1);
 }
 
 .category_camp {
@@ -86,7 +86,7 @@
     background-color: var(--w-100);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    font-size: 18px;
+    font-size: calc(var(--font-2) * 0.6);
 }
 
 
@@ -95,7 +95,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: calc(var(--font-2) * 0.8);
     margin:0px;
     padding: 0px;
     border-radius: 90px;
@@ -107,13 +107,13 @@
 }
 
 .material-symbols-outlined{
-    font-size: 30px;
+    font-size: var(--font-2);
 }
 
 .go_edit button{
     border-radius: 10px;
     background-color: var(--w-100);
-    font-size: 20px;
+    font-size: calc(var(--font-2) * 0.6);
 }
 a{
     text-decoration: none;
@@ -177,6 +177,7 @@ a{
 
 
 @media screen and (min-width: 320px){
+
     .card_image{
         border-radius: 100%;
         width: 300px;
@@ -185,25 +186,18 @@ a{
         align-items: center;
     }
     .card_text h4{
-        font-size: 42px;
+        font-size: calc(var(--font-3) * 0.8);
     }
     .e-mail, .card_text p, .tag, .options {
-        font-size: 34px;
+        font-size: calc(var(--font-3) * 0.6);
     }
     .material-symbols-outlined{
-        font-size: 42px;
+        font-size: calc(var(--font-3) * 0.8);
     }
     .button_edit p{
-        font-size: 30px;
+        font-size: calc(var(--font-3) * 0.6);
     }
-    .main-header {
-        margin-bottom: 16px;
-        margin-top: 20px;
-      }
-      
-    .main-header h1 {
-        font-size: 275% !important;
-    }
+
 }
 @media screen and (min-width: 768px){
     .card_image{
@@ -223,10 +217,10 @@ a{
         align-items: center;
     }
     .card_text h4{
-        font-size: 32px;
+        font-size: var(--font-2);
     }
     .e-mail, .card_text p, .tag, .options, .go_edit {
-        font-size: 24px;
+        font-size: calc(var(--font-2) * 0.6);
     }
     
 }
