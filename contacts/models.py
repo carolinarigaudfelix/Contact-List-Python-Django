@@ -14,7 +14,7 @@ CATEGORY_CHOICES = (
 class Contact(models.Model):
     image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=254, verbose_name='E-mail')
+    email = models.EmailField(max_length=254, verbose_name='E-mail', blank=True)
     phone = PhoneNumberField()
     category = models.CharField(max_length=10, choices=CATEGORY_CHOICES, default='family')
 
