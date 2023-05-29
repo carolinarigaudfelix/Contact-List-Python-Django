@@ -10,6 +10,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.default-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-2);
+}
+
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -197,7 +204,9 @@ input:focus, input:focus {
 }
 
 @media screen and (min-width: 320px){
-
+    .default-contact{
+        font-size: calc(var(--font-2)*0.6);
+    }
     .card_contact{
         margin-left: 32px;
         margin-right: 32px;
