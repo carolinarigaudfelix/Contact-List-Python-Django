@@ -18,8 +18,7 @@
 .back_contact {
     display: flex;
     flex-direction: row;
-    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
-    background-color: var(--w-100);
+    margin-left: 12px;
 }
 .back_contact a{
     display: flex;
@@ -30,7 +29,8 @@
     color: black;
     justify-content: left;
     border-radius: 4px;
-    background-color: var(--w-200);
+    background-color: var(--w-100);
+    gap: 6px;
 }
 
 .back_contact p{
@@ -43,6 +43,10 @@
     text-decoration: none;
     border: 0px;
     padding: 0px;
+}
+
+.back_contact button a {
+    background-color: var(--w-200);
 }
 
 .form_create label{
@@ -82,7 +86,7 @@
     margin-right: 69px;
     justify-content: center;
     align-items: center;
-
+    background-color: var(--w-200);
 }
 
 .form_create form{
@@ -102,27 +106,27 @@
     .card_image span{
         font-size: calc(var(--font-3) * 0.8);
     }
-    #id_name, #id_email, #id_category{
+    #id_name, #id_email, #id_category,#id_phone{
         width: 400px;
         font-size: calc(var(--font-3) * 0.8);
+        border: 1px solid #CCCCCC;
+        background-color: var(--w-200);
     }
+
+    #id_name, #id_email, #id_phone, #id_category:focus{
+        outline: none;
+    }
+
     #id_phone{
         width: 50%;
         font-size: calc(var(--font-2) * 0.8);
     }
     label[for="id_name"], label[for="id_email"], label[for="id_category"], label[for="id_image"], label[for="id_phone"] {
         font-size: var(--font-2);
+        
     }
 
     input#id_image{
-        font-size: var(--font-2);
-    }
-    .main-header {
-        margin-bottom: 16px;
-        margin-top: 20px;
-      }
-      
-    .main-header h1 {
         font-size: var(--font-2);
     }
     .form_create p{
@@ -131,12 +135,20 @@
     .form_create #submit{
         margin-top: 24px;
         font-size: calc(var(--font-2) * 0.8);
+        margin-top: 24px;
+        background: var(--bl-100);
+        border: none;
+        color: var(--w-100);
+        border-radius: 6px;
     }
     .form-select option{
         font-size: 20px;
     }
     .back_bottom p, .material-symbols-outlined{
         font-size: var(--font-2);
+    }
+    .back_bottom span{
+        color: var(--bl-100);
     }
 }
 
@@ -171,10 +183,6 @@
     input#id_image{
         font-size: var(--font-1);
     }
-    .main-header {
-        margin-bottom: 16px;
-        margin-top: 20px;
-      }
     .form_create p{
         margin-bottom: 16px;
     }
@@ -186,6 +194,6 @@
         font-size: calc(var(--font-2) * 0.6);
     }
     .back_bottom p, .material-symbols-outlined{
-        font-size: var(--font-1);
+        font-size: calc(var(--font-2)*0.8);
     }
 }

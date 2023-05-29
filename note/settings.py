@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
-from decouple import config
+from decouple import config, Csv
+
 
 
 
@@ -17,7 +18,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['10.0.2.15', '127.0.0.1']
+ALLOWED_HOSTS =  config('ALLOWED_HOSTS', default=[], cast=Csv())
 
 
 # Application definition

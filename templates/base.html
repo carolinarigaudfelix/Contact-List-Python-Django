@@ -3,8 +3,8 @@
 <html lang="pt">
 
 <head>
-    <title>Lista de Contatos</title>
-    
+    <title>Contact List</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/73/73552.png" type="image/x-icon"/>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
 
     <div class = "search">
         <form action = "{% url 'contact_list' %}"  method="GET">
-            <input type="text" name = "name" id = "name" placeholder = "Search Name" >
+            <input type="text" name="name" id="name" value="{{ txt_name }}">
             <button type = "submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
